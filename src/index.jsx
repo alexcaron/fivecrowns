@@ -4,7 +4,7 @@ import Hand from './Hand.jsx';
 
 function App() {
   return (
-    <Hand round={4}></>
+    <Hand round={4} />
   );
 }
 
