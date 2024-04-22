@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Hand from './Hand.jsx';
 
 function App() {
   return (
-    <div>
-      Hello, world!
-    </div>
+    <Hand round={4}></>
   );
 }
 
