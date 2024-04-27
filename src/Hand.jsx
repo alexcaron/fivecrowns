@@ -1,13 +1,18 @@
 import { useState } from 'react';
+import Card from './Card.jsx';
 
 export default function Hand({ round, cardsInHand }) {
 
-  return (
-    <div className="hand">
-      <div className="card">
-        {`I am a card for round ${round}`}
-      </div>
-    </div>
-  );
+  let cards = [];
+  for (let i=1; i<=round; i++) {
+    cards.push(i);
+  };
 
+  return(
+    <div className="hand">
+      {cards.map((card) => (
+          <Card round={round} />
+      ))}
+    </div>
+  )
 };
