@@ -8,11 +8,25 @@ export default function Hand({ round, cardsInHand }) {
     cards.push(i);
   };
 
+  const [closed, setClosed] = useState(false);
+
+  function close() {
+    setClosed(true);
+  }
+
+
   return(
+    closed ?
+    <div>Closed!</div> :
     <div className="hand">
-      {cards.map((card) => (
-          <Card round={round} />
-      ))}
+      <div className="cards">
+        {cards.map((card) => (
+            <Card round={round} />
+        ))}
+      </div>
+      <button onClick={close}>
+        Close
+      </button>
     </div>
   )
 };
